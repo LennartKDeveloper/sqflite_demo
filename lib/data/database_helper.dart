@@ -34,6 +34,7 @@ class DatabaseHelper {
     try {
       var query =
           await db.rawQuery("SELECT * FROM goe_codes WHERE goae_code= '$goae'");
+      print(query);
       return query[0];
     } catch (e) {
       return {"description": ""};
